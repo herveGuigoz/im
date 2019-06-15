@@ -7,7 +7,7 @@
       </div>
       <h1 class="lastname">Guigoz</h1>
     </div>
-  <button @click="alertd">ABOUT</button>
+  <button>ABOUT</button>
   </div>
 </template>
 <script>
@@ -15,11 +15,7 @@ export default {
   name: 'MainNav',
   props: {
     showAbout: Boolean
-  },
-  methods: {
-    alertd(){
-    console.log('ddd')
-    }
+  }
   }
 }
 </script>

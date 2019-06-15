@@ -1,90 +1,78 @@
 <template>
-
-    <div
-      class="modal"
-      @click="$emit('hideContent')"
+  <div
+    class="modal"
+    @click="$emit('hideContent')"
+  >
+    <transition
+      name="content"
+      @after-leave="$emit('close')"
     >
-      <transition
-        name="content"
-        @after-leave="$emit('close')"
+      <div
+        v-if="showContent"
+        class="content"
+        @click.stop
       >
-        <div
-          v-if="showContent"
-          class="content"
-          @click.stop
-        >
-        <h1>Je suis disponible pour un stage ou en freelance</h1>
+        <h1>A l'écoute pour un poste de développeur PHP.</h1>
+
         <p>
-          A l'écoute pour un poste junior sur le langage PHP. 
+          Impliqué et curieux, j'aime découvrir de nouvelles technologies et j'ai le goût du travail bien fait !
         </p>
 
-        </div>
-      </transition>
-    </div>
+        <div class="flex-row">
 
+          <div class="flex-col-experiences">
+
+            <div class="title">experiences</div>
+            <div class="bordered"></div>
+            <div class="col" v-for="experience in experiences" :key="experience">
+              <div class="experiences titre pt1">
+                {{ experience.titre }}
+              </div>
+              <div class="experiences">
+                {{ experience.mission }}
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col ml-5">
+            <div class="title">Techno</div>
+            <div class="bordered"></div>
+            <div class="col">
+              <div class="experiences titre pt1" v-for="techno in technos" :key="techno">
+                {{ techno }}
+              </div>
+              <div class="experiences"></div>
+            </div>
+          </div>
+          <div class="flex-col ml-5">
+            <div class="title">Soft Skill</div>
+            <div class="bordered"></div>
+            <div class="col">
+              <div class="experiences titre pt1" v-for="softskill in softskills" :key="softskill">
+                {{ softskill }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script>
 export default {
+  name:'modal',
   props: {
-    showContent: Boolean
+    showContent: Boolean,
+    experiences : Array,
+    competences : String,
+    technos: Array,
+    softskills: Array
   }
 }
 </script>
 
 <style scoped>
-/*
-.about-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: none
-}
-.about-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 98;
-  background: #000;
-  opacity: 0;
-  width: 100%;
-  height: 100%
-}
-
-@media (min-width:960px) {
-  .about-overlay {
-    background: rgba(0, 0, 0, 0)
-  }
-}
-
-.about-container .about-wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 99;
-    background: #fbfaf7;
-    width: 95%;
-    height: 88%;
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch
-}
-
-@media (min-width:960px) {
-    .about-container .about-wrapper {
-        overflow: auto;
-        -webkit-overflow-scrolling: initial;
-        width: 96.09375%;
-        height: 91.52941%
-    }
-}
-*/
 
 .modal {
   position: absolute;
@@ -106,18 +94,65 @@ export default {
   height: 86%;
   overflow: scroll;
   border-radius: 3px;
+  color: #c4c3c3;
+  padding: 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+.content > h1 {
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 21px;
   line-height: 26px;
-  color: #000;
   letter-spacing: -.22px;
-  padding: 20px;
-  -webkit-overflow-scrolling: touch
 }
 .content > p {
-  color: #444;
+  font-family: Poppins-light,Helvetica,Arial,sans-serif;
+  color: #c4c3c3;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
 }
+.title {
+    font-family: Poppins-light,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0.5rem;
+    color: #000;
+    letter-spacing: -.05px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  padding-top: 2rem;
+}
+.flex-col-experiences {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.bordered {
+  border-top: 1px solid #c4c3c3!important;
+  font-size: 0.8rem;
+}
+.col {
+  font-size: 0.8rem;
+}
+.experiences, .competences {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #000;
+  letter-spacing: -.17px;
+}
+
 .content-enter {
   transform: translateY(100%);
 }
@@ -127,5 +162,14 @@ export default {
 }
 .content-enter-active, .content-leave-active {
   transition: .4s;
+}
+
+.pt1 {padding-top: 0.5rem}
+
+.titre {
+  color: #c4c3c3;
+}
+.ml-5 {
+  margin-left:5rem;
 }
 </style>

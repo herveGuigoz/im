@@ -22,28 +22,28 @@ $main-color: #4a5568;
 $secondary-color: #ffffff;
 
 button {
-    font-family: Poppins,Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    color: $main-color;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
-    background: transparent;
-    letter-spacing: .23px;
-    text-align: right;
-    text-decoration: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-          to right,
-          $secondary-color,
-          $secondary-color 50%,
-          $main-color 50%);
-          background-size: 200% 100%;
-          background-position: 100%;
+  font-family: Poppins,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: $main-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  background: transparent;
+  letter-spacing: .23px;
+  text-align: right;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+        to right,
+        $secondary-color,
+        $secondary-color 50%,
+        $main-color 50%);
+        background-size: 200% 100%;
+        background-position: 101%;
 }
 
 button:hover {

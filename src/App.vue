@@ -6,6 +6,7 @@
       @openModal="isOpen = true"
       :isOpen="this.isOpen"
     />
+    <contact/>
     <transition
       name="fade"
       @after-enter="showContent = true"
@@ -15,6 +16,9 @@
         @close="isOpen = false"
         @hideContent="showContent = false"
         :showContent="this.showContent"
+        :experiences="this.experiences"
+        :technos="this.technos"
+        :softskills="softskills"
       />
     </transition>
   </div>
@@ -25,19 +29,58 @@ import Name from './components/Name.vue'
 import MainContent from './components/MainContent.vue'
 import About from './components/About.vue'
 import Modal from './components/Modal'
+import Contact from "./components/Contact";
 
 export default {
   name: 'app',
   components: {
+    Contact,
     Name,
     MainContent,
     About,
-    Modal
+    Modal,
   },
   data: function(){
     return {
       isOpen: false,
-      showContent: false
+      showContent: false,
+      experiences : [
+        {
+          societe: 'WILD CODE SCHOOL',
+          titre: 'DEVELOPPEUR PHP - SYMFONY',
+          annee: 2019,
+          location: 'Lyon',
+          mission: "Creation d’un journal vidéo sous Symfony 4. Les fonctionnalités développées sont : la gestion des comptes (créateur et internaute), la gestion des vidéos par le créateur, l’affichage du journal vidéo, la gestion des commentaires, la mise en place de statistiques (vues, likes), la gestion des abonnements et des notifications.",
+          techno: ['Symfony', 'Javascript', 'UIkit', 'Git', 'PHP Unit']
+        },
+        {
+          societe: 'WILD CODE SCHOOL',
+          titre: 'DEVELOPPEUR PHP',
+          annee: 2019,
+          location: 'Lyon',
+          mission: 'Creation un site de promotion et de gestion des reservations hôtelière (design pattern MVC) avec manipulation des ressources d’une base de données (MySQL).',
+          techno: ['PHP', 'SQL', 'VueJs', 'Javascript', 'Material Design', 'Git']
+        }
+      ],
+      technos : [
+        'PHP',
+        'Symfony / Laravel',
+        'Javascript',
+        'Vue.js',
+        'HTML & CSS & Twig',
+        'Git',
+        'Méthode Scrum',
+        'ORM Doctrine',
+        'Linux'
+      ],
+      softskills : [
+        'Adaptabilité',
+        'Apprentissage rapide',
+        'Curiosité',
+        'Patience',
+        'Organisation',
+        'Rigeur'
+      ]
     }
   }
 }
@@ -45,6 +88,9 @@ export default {
 
 <style>
 @import url('./assets/fonts/fonts.css');
+html, body {
+  background: #e57373; /* #16c79e */
+}
 * {
     vertical-align: baseline;
     border: 0;
@@ -55,7 +101,6 @@ export default {
 }
 #app {
   padding: 0 2rem;
-  background: #e57373;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -80,6 +125,11 @@ a, abbr, acronym, address, applet, big, blockquote, body, button, caption, cite,
 
 .main-content {
   font-size: 2.5rem;
+}
+
+.contact {
+  width: 100%;
+  background: #42b983;
 }
 
 .fade-enter, .fade-leave-to {

@@ -1,12 +1,15 @@
 <template>
   <div id="main-content">
     <div class="me">
-      <p>Passionné du numérique, je me suis réorienté vers le métier de <span class="white">développeur Web.</span><br> La formation à la Wild Code School de Lyon m’a permis de mettre en pratique la méthode Scrum à travers la réalisation de projets clients et de me perfectionner sur le framework PHP, Symfony.</p>
+      <p>Les formations que j'ai suivies, mes différents stages, mon expérience professionnelle et tous les travaux et projets que j'ai menés m'ont permis d'acquérir de nombreuses compétences dans le domaine du developpement web.</p>
+        
+        
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'MainContent',
 }
@@ -14,12 +17,16 @@ export default {
 
 <style scoped>
 #main-content {
-  margin-top:4rem;
   width: 100vw;
   padding-left: 0;
   margin-left: 0;
 }
-
+.me {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
 p, span {
   font-size: 2.5vw;
   line-height: 4.21875vw;
@@ -36,4 +43,5 @@ p, span {
 .white {
   color:#ffffff;
 }
+
 </style>
