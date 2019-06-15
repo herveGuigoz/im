@@ -1,7 +1,7 @@
 <template>
   <div id="main-content">
     <div class="me">
-      <p>Les formations que j'ai suivies, mes différents stages, mon expérience professionnelle et tous les travaux et projets que j'ai menés m'ont permis d'acquérir de nombreuses compétences dans le domaine du developpement web.</p>
+      <p>Les formations que j'ai suivies, mes différents stages, mon expérience professionnelle et tous les travaux et projets auxquels j'ai participé m'ont permis d'acquérir de nombreuses compétences dans le domaine du developpement web.</p>
         
         
     </div>
