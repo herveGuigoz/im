@@ -46,7 +46,6 @@ export default {
       showContent: false,
       experiences : [
         {
-          societe: 'WILD CODE SCHOOL',
           titre: 'DEVELOPPEUR PHP - SYMFONY',
           annee: 2019,
           location: 'Lyon',
@@ -54,7 +53,6 @@ export default {
           techno: ['Symfony', 'Javascript', 'UIkit', 'Git', 'PHP Unit']
         },
         {
-          societe: 'WILD CODE SCHOOL',
           titre: 'DEVELOPPEUR PHP',
           annee: 2019,
           location: 'Lyon',
@@ -89,7 +87,7 @@ export default {
 <style>
 @import url('./assets/fonts/fonts.css');
 html, body {
-  background: #e57373; /* #16c79e */
+  background: #e57373;
 }
 * {
     vertical-align: baseline;
