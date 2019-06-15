@@ -1,3 +1,3 @@
 # im
 
-www.herveguigoz.im
+https://herve-guigoz.netlify.com
