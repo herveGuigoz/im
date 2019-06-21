@@ -77,7 +77,8 @@ export default {
         'Initiative',
         'Rigueur et Précision',
         'Respect des règles, des standards et des méthodes',
-        'Travail en équipe'
+        'Travail en équipe',
+        "Communication aisée, Capacité d'écoute"
       ]
     }
   }
