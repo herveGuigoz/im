@@ -72,12 +72,12 @@ export default {
         'Linux'
       ],
       softskills : [
-        'Adaptabilité',
-        'Apprentissage rapide',
-        'Curiosité',
-        'Patience',
-        'Organisation',
-        'Rigeur'
+        'Disponibilité et engagement',
+        'Résistance au stress',
+        'Initiative',
+        'Rigueur et Précision',
+        'Respect des règles, des standards et des méthodes',
+        'Travail en équipe'
       ]
     }
   }
