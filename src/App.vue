@@ -47,14 +47,12 @@ export default {
       experiences : [
         {
           titre: 'DEVELOPPEUR PHP - SYMFONY',
-          annee: 2019,
           location: 'Lyon',
           mission: "Creation d’un journal vidéo sous Symfony 4. Les fonctionnalités développées sont : la gestion des comptes (créateur et internaute), la gestion des vidéos par le créateur, l’affichage du journal vidéo, la gestion des commentaires, la mise en place de statistiques (vues, likes), la gestion des abonnements et des notifications.",
           techno: ['Symfony', 'Javascript', 'UIkit', 'Git', 'PHP Unit']
         },
         {
           titre: 'DEVELOPPEUR PHP',
-          annee: 2019,
           location: 'Lyon',
           mission: 'Creation un site de promotion et de gestion des reservations hôtelière (design pattern MVC) avec manipulation des ressources d’une base de données (MySQL).',
           techno: ['PHP', 'SQL', 'VueJs', 'Javascript', 'Material Design', 'Git']
@@ -88,7 +86,7 @@ export default {
 <style>
 @import url('./assets/fonts/fonts.css');
 html, body {
-  background: #e57373;
+      background: linear-gradient(315deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%), linear-gradient(315deg, #3eba9b 0%, #16c79e 100%);
 }
 * {
     vertical-align: baseline;

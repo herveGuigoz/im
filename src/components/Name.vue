@@ -26,7 +26,7 @@ export default {
 }
 .dot {
   display: inline-block;
-  background-color: #e57373;
+  background-color: #ffffff;
   border-radius: 100%;
   width: 12px;
   height: 12px;

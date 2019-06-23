@@ -27,7 +27,7 @@ button {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: $main-color;
+  color: $secondary-color;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
@@ -39,9 +39,9 @@ button {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(
         to right,
-        $secondary-color,
-        $secondary-color 50%,
-        $main-color 50%);
+        $main-color,
+        $main-color 50%,
+        $secondary-color 50%);
         background-size: 200% 100%;
         background-position: 101%;
 }
