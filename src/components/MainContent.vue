@@ -1,17 +1,24 @@
 <template>
   <div id="main-content">
     <div class="me">
-      <p>Les formations que j'ai suivies, mes différents stages, mon expérience professionnelle et tous les travaux et projets auxquels j'ai participé m'ont permis d'acquérir de nombreuses compétences dans le domaine du developpement web.</p>
-        
-        
+      <p ref="anime" id="anime"></p>
     </div>
   </div>
 </template>
 
 <script>
-
+import Typed from 'typed.js';
 export default {
   name: 'MainContent',
+  mounted() {
+    let options = {
+      strings: ["Les formations que j'ai suivies","Mes différents stages","Mon expérience professionnelle et tous les travaux et projets auxquels j'ai participé m'ont permis d'acquérir de nombreuses compétences dans le domaine du developpement web."],
+      //strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+      typeSpeed: 40,
+      showCursor: false
+    }
+    let typed = new Typed(this.$refs.anime, options);
+  }
 }
 </script>
 
