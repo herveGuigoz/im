@@ -47,6 +47,12 @@ export default {
       experiences : [
         {
           titre: 'DEVELOPPEUR PHP - SYMFONY',
+          location: 'Bron',
+          mission: "Developpement d’une API Rest (Symfony 4.2.0, API Platform 2.4.5), et d’une solution client en VueJs (utilisation de NuxtJs ^2) pour un projet de capture video de rencontres sportive et mise à dispositions de statistiques individuelles et d’équipes.",
+          techno: ['Symfony', 'Api plateform', 'VueJS', 'NuxtJs', 'Git', 'PHP Unit']
+        },
+        {
+          titre: 'DEVELOPPEUR PHP - SYMFONY',
           location: 'Lyon',
           mission: "Creation d’un journal vidéo sous Symfony 4. Les fonctionnalités développées sont : la gestion des comptes (créateur et internaute), la gestion des vidéos par le créateur, l’affichage du journal vidéo, la gestion des commentaires, la mise en place de statistiques (vues, likes), la gestion des abonnements et des notifications.",
           techno: ['Symfony', 'Javascript', 'UIkit', 'Git', 'PHP Unit']
@@ -60,12 +66,15 @@ export default {
       ],
       technos : [
         'PHP',
-        'Symfony / Laravel',
+        'Symfony',
+        'API Platform',
         'Javascript',
         'Vue.js',
+        'NuxtJs',
+        'SQL',
         'HTML & CSS & Twig',
         'Git',
-        'Méthode Scrum',
+        'Methodes Agile / Scrum.',
         'ORM Doctrine',
         'Linux'
       ],

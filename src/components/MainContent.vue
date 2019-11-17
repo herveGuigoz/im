@@ -12,12 +12,12 @@ export default {
   name: 'MainContent',
   mounted() {
     let options = {
-      strings: ["Les formations que j'ai suivies","Mes différents stages","Mon expérience professionnelle et tous les travaux et projets auxquels j'ai participé m'ont permis d'acquérir de nombreuses compétences dans le domaine du developpement web."],
+      strings: ["Les formations que j'ai suivies","Mes différents stages","Mon expérience professionnelle et tous les travaux et projets auxquels j'ai participés m'ont permis d'acquérir de nombreuses compétences dans le domaine du developpement web."],
       //strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
       typeSpeed: 40,
       showCursor: false
     }
-    let typed = new Typed(this.$refs.anime, options);
+    new Typed(this.$refs.anime, options);
   }
 }
 </script>
